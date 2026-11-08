@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "product": "pipmcp",
+  "credential": "PIPMCP_API_KEY",
+  "skills": [
+    {
+      "name": "pipmcp-shopify",
+      "description": "Connect AI agents to Shopify using one PipMCP API key and actual hosted tool discovery."
+    }
+  ],
+  "files": {
+    "skills/pipmcp-shopify/SKILL.md": "af1a5a12a9f31647ca443c418e4f6303039a4991a0b8c51adc9c79a8c8d708fb"
+  }
+}
