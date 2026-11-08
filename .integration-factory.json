@@ -12,7 +12,7 @@
   "maintainer": "jannikco",
   "license": "MIT",
   "attributionSlug": "github-shopify-mcp",
-  "sourceRevision": "838c77763df7423128d0906e409813ffd2c52981e6269fcca75629819cf0d3f7",
+  "sourceRevision": "6e37d30ecf01df14dfe208d4cc63775362e0afb3c45a542d3fef87a5e13bab47",
   "qualityVersion": 2,
   "artifactType": "connector",
   "evidence": [
@@ -32,7 +32,7 @@
   "appName": "Shopify",
   "connectorId": "shopify",
   "executionAuthority": "pipmcp-gateway",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "agentReady": true,
   "capabilityEvidence": {
     "local": {

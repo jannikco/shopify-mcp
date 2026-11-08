@@ -1,0 +1,49 @@
+{
+  "id": "shopify-draft-catalog-review",
+  "repositoryId": "shopify-mcp",
+  "product": "pipmcp",
+  "connectorId": "shopify",
+  "title": "Review Shopify draft products",
+  "promise": "Prepare a catalog review from products still in draft, without changing titles or publishing products.",
+  "sourceRevision": "6e37d30ecf01df14dfe208d4cc63775362e0afb3c45a542d3fef87a5e13bab47",
+  "credential": "PIPMCP_API_KEY",
+  "transport": "pipmcp-gateway",
+  "sourceRefs": [
+    "https://shopify.dev/docs/api/admin-graphql/2026-10/queries/products"
+  ],
+  "readTask": {
+    "intent": "Prepare a catalog review from products still in draft, without changing titles or publishing products.",
+    "requiredCapability": "Read-only authorized account data; discover actual names and schemas first"
+  },
+  "synthetic": {
+    "strategy": "equals",
+    "field": "status",
+    "value": "DRAFT",
+    "records": [
+      {
+        "id": "synthetic-product-sh1",
+        "status": "DRAFT",
+        "title": "Synthetic new product"
+      },
+      {
+        "id": "synthetic-product-sh2",
+        "status": "ACTIVE",
+        "title": "Synthetic existing product"
+      }
+    ],
+    "input": {
+      "limit": 10
+    },
+    "normalization": "Invented normalized review fields demonstrate task logic; live provider schemas and field mappings must be reviewed separately.",
+    "expectedReviewCount": 1,
+    "asOf": "2026-11-08T00:00:00Z"
+  },
+  "livePolicy": {
+    "default": "preflight-only",
+    "explicitReadSelectionRequired": true,
+    "providerWritesAllowed": false,
+    "sandboxWritesRequireSeparateApproval": true
+  },
+  "baseSourceRevision": "838c77763df7423128d0906e409813ffd2c52981e6269fcca75629819cf0d3f7",
+  "releaseVersion": "1.1.0"
+}
